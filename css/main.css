@@ -640,18 +640,27 @@ body {
   border-top: 4px solid var(--accent);
 }
 
-opacity: 0.8;
-font-size: 0.9rem;
-}
+
 
 /* =========================================
    RESPONSIVE STYLES
    ========================================= */
+@media (max-width: 900px) {
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .lv-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
 
   /* Navbar */
   .hamburger {
     display: block;
+    z-index: 1001;
   }
 
   .nav-links {
@@ -664,7 +673,7 @@ font-size: 0.9rem;
     background: var(--primary);
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
 
   .nav-links.show {
@@ -673,22 +682,35 @@ font-size: 0.9rem;
 
   .nav-links li {
     margin: 15px 0;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
   }
 
   /* Hero */
   .hero {
+    height: auto;
+    min-height: 60vh;
+    padding: 80px 0;
     background-position: center;
-    height: 70vh;
   }
 
   .hero-text h1 {
-    font-size: 2.5rem;
-    /* Smaller heading */
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
   }
 
   .hero-actions {
     flex-direction: column;
     gap: 15px;
+    padding: 0 20px;
   }
 
   /* Sections Global */
@@ -702,13 +724,23 @@ font-size: 0.9rem;
 
   /* Grids */
   .about-card,
-  .lv-container,
   .detail-box,
-  .cta,
-  .open-strip {
+  .process,
+  .admission-banner .banner-actions {
     grid-template-columns: 1fr;
     flex-direction: column;
     text-align: center;
+  }
+
+  .about-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-text h2::after {
+    margin: 8px auto 0;
+    /* Center the underline */
   }
 
   /* Highlights Strip */
@@ -716,6 +748,7 @@ font-size: 0.9rem;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 30px 20px;
     text-align: center;
   }
 
@@ -727,6 +760,34 @@ font-size: 0.9rem;
   .banner-actions {
     flex-direction: column;
     gap: 15px;
+    align-items: center;
+  }
+
+  .banner-btn-primary,
+  .banner-btn-secondary {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .facility-grid,
+  .academic-grid,
+  .event-grid {
+    grid-template-columns: 1fr;
   }
 }
 

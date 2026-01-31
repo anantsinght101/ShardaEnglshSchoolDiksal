@@ -286,16 +286,23 @@
 /* RESPONSIVE */
 @media(max-width:768px) {
 
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
   .welcome-box,
   .principal-box,
   .vision-mission,
   .history-box,
   .bottom {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .principal-box {
     text-align: center;
+    padding: 20px;
+    grid-template-columns: 1fr;
   }
 
   .principal p {
@@ -303,5 +310,19 @@
     border-top: 4px solid var(--accent);
     padding-top: 20px;
     padding-left: 0;
+  }
+
+  .vm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vm,
+  .core,
+  .awards {
+    padding: 20px;
+  }
+
+  .history img {
+    height: 250px;
   }
 }
