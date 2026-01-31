@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sharda English School - Diksal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    /* LOGO STYLES */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .school-logo {
+      height: 80px;
+      /* Updated to 80px */
+      width: 80px;
+      object-fit: contain;
+      /* Ensures logo fits inside without cutting */
+      margin-right: 12px;
+      /* Space between logo and text */
+      /* Removed border-radius so the SVG stays sharp */
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+
+      <a href="index.html" class="logo-container">
+        <img src="images/schoollogo.svg" alt="Sharda English School Diksal" class="school-logo">
+        <span>Sharda English School</span>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#academics">Academics</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><button class="apply-btn">Apply Now</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Nurturing Young Minds<br>for a Brighter Tomorrow</h1>
+        <p>CBSE Affiliated School from Grade 1 to 10</p>
+
+        <div class="hero-actions">
+          <button class="primary-btn">Apply for Admission</button>
+          <button class="secondary-btn">Download Prospectus</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="highlights">
+    <div class="highlight-item">🏫 CBSE Affiliated</div>
+    <div class="highlight-item">👩‍🏫 Qualified Teachers</div>
+    <div class="highlight-item">🔬 Modern Labs</div>
+    <div class="highlight-item">🌱 Holistic Development</div>
+  </section>
+
+  <section class="about">
+    <div class="about-card">
+      <img src="images/school-building.jpg" alt="School">
+      <div class="about-text">
+        <h2>About Our School</h2>
+        <ul>
+          <li>Established in 2005</li>
+          <li>Vision: Excellence in Education</li>
+          <li>Mission: Empowering Young Minds</li>
+        </ul>
+        <button class="primary-btn small">Read More</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="academics" class="academics">
+    <h2>Our Academics</h2>
+
+    <!-- CARDS from academics.html -->
+    <div class="academic-grid">
+      <!-- Primary -->
+      <div class="academic-card">
+        <div class="card-header green-header">
+          <h3>Primary School</h3>
+          <p>Class 1 – 5</p>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>Activity-Based Learning</li>
+            <li>Interactive Lessons</li>
+            <li>Strong Foundation</li>
+          </ul>
+          <button class="card-btn">View Curriculum</button>
+        </div>
+      </div>
+
+      <!-- Middle -->
+      <div class="academic-card">
+        <div class="card-header orange-header">
+          <h3>Middle School</h3>
+          <p>Class 6 – 8</p>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>Experiential Learning</li>
+            <li>Hands-on Projects</li>
+            <li>Critical Thinking</li>
+          </ul>
+          <button class="card-btn">View Curriculum</button>
+        </div>
+      </div>
+
+      <!-- Secondary -->
+      <div class="academic-card">
+        <div class="card-header blue-header">
+          <h3>Secondary School</h3>
+          <p>Class 9 – 10</p>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>CBSE Exam Prep</li>
+            <li>In-depth Subjects</li>
+            <li>Career Guidance</li>
+          </ul>
+          <button class="card-btn">View Curriculum</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRIMARY SECTION -->
+    <section class="detail">
+      <h2>Primary School (Classes 1 – 5)</h2>
+      <div class="detail-box">
+        <ul>
+          <li>English</li>
+          <li>Mathematics</li>
+          <li>EVS</li>
+          <li>Hindi</li>
+          <li>Computer Science</li>
+          <li>Art & Craft</li>
+        </ul>
+        <img src="images/primary-students.jpg" alt="Primary School">
+      </div>
+    </section>
+
+    <!-- SECONDARY SECTION -->
+    <section class="detail">
+      <h2>Secondary School (Classes 9 – 10)</h2>
+      <div class="detail-box">
+        <ul>
+          <li>English</li>
+          <li>Mathematics</li>
+          <li>Science</li>
+          <li>Social Science</li>
+          <li>Information Technology</li>
+        </ul>
+        <img src="images/secondary-students.jpg" alt="Secondary School">
+      </div>
+    </section>
+  </section>
+
+  <section id="facilities" class="facilities">
+    <h2>Our Facilities</h2>
+    <div class="facility-grid">
+      <!-- Science Lab -->
+      <div class="facility-card">
+        <img src="images/science-lab.jpg" alt="Science Lab">
+        <h3>Science Laboratories</h3>
+      </div>
+
+      <!-- Computer Lab -->
+      <div class="facility-card">
+        <img src="images/computer-lab.jpg" alt="Computer Lab">
+        <h3>Computer Laboratory</h3>
+      </div>
+
+      <!-- Library -->
+      <div class="facility-card">
+        <img src="images/library.jpg" alt="Library">
+        <h3>Library</h3>
+      </div>
+
+      <!-- Sports -->
+      <div class="facility-card">
+        <img src="images/sports-ground.jpg" alt="Sports">
+        <h3>Sports Facilities</h3>
+      </div>
+
+      <!-- Music & Art -->
+      <div class="facility-card">
+        <img src="images/music-art.jpg" alt="Music and Art">
+        <h3>Music & Art Room</h3>
+      </div>
+
+      <!-- Cafeteria -->
+      <div class="facility-card">
+        <img src="images/cafeteria.jpg" alt="Cafeteria">
+        <h3>Cafeteria & Transport</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="admissions" class="admission-banner">
+    <h2>Admissions Open for 2025–26</h2>
+    <p>Applications are now being accepted for the new academic year.</p>
+    <div class="banner-actions">
+      <button class="banner-btn-primary">Apply Online</button>
+      <button class="banner-btn-secondary">Download Brochure</button>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Admission Process</div>
+    <div class="section-sub">Follow these simple steps to enroll your child</div>
+
+    <div class="process">
+      <div class="step">
+        <div class="step-circle">1</div>
+        <h4>Fill Application</h4>
+      </div>
+      <div class="step active">
+        <div class="step-circle">2</div>
+        <h4>Submit Documents</h4>
+      </div>
+      <div class="step">
+        <div class="step-circle">3</div>
+        <h4>Interaction</h4>
+      </div>
+      <div class="step">
+        <div class="step-circle">4</div>
+        <h4>Assessment</h4>
+      </div>
+      <div class="step">
+        <div class="step-circle">5</div>
+        <h4>Confirmation</h4>
+      </div>
+    </div>
+
+    <button class="faq-btn">Read FAQs</button>
+  </section>
+
+  <section>
+    <div class="section-title">Admission Criteria</div>
+
+    <div class="criteria">
+      <div>
+        <h4>Age Criteria</h4>
+        <ul>
+          <li>Class 1: 6+ years</li>
+          <li>Class 6: 11+ years</li>
+          <li>Class 9: 14+ years</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Required Documents</h4>
+        <ul>
+          <li>Birth Certificate</li>
+          <li>Aadhaar Card</li>
+          <li>Previous Report Card</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Entrance Test (6–10)</h4>
+        <ul>
+          <li>English & Mathematics</li>
+          <li>Science basics</li>
+        </ul>
+      </div>
+
+      <div class="criteria-actions">
+        <button class="btn-white">Apply Now</button>
+        <button class="btn-blue">Contact Us</button>
+      </div>
+    </div>
+  </section>
+  </section>
+
+  <section class="events">
+    <h2>Latest Events & News</h2>
+    <div class="event-grid">
+      <img src="images/event-1.jpg" alt="Event 1">
+      <img src="images/event-2.jpg" alt="Event 2">
+      <img src="images/event-3.jpg" alt="Event 3">
+      <img src="images/event-4.jpg" alt="Event 4">
+      <img src="images/event-5.jpg" alt="Event 5">
+      <img src="images/event-6.jpg" alt="Event 6">
+    </div>
+    <button class="primary-btn small">View More</button>
+  </section>
+
+  <!-- SCHOOL TOUR & LOCATION -->
+  <section class="location-video-section">
+    <div class="lv-container">
+
+      <!-- Video Side -->
+      <div class="lv-box video-box">
+        <h2>School Tour</h2>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/s60fXY-b-xI" title="School Tour Video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p>Take a virtual tour of our campus and facilities.</p>
+      </div>
+
+      <!-- Map Side -->
+      <div class="lv-box map-box">
+        <h2>Visit Us</h2>
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15201.07221008085!2d73.37688537592476!3d17.658607983232238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be9dd6b6188235f%3A0xe67bc5375591eb38!2sVidya%20Prasarak%20Mandal's%20Sharada%20English%20School-Diksai!5e0!3m2!1sen!2sin!4v1706789012345!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="location-details">
+          <p><strong>📍 Sharada English School</strong></p>
+          <p>At Post Diksai, Tal. Chiplun, Dist. Ratnagiri</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2025 Sharda English School, Diksal | CBSE Affiliated
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
