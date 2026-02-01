@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = facilityGrid.querySelectorAll('.facility-card');
   const cardCount = cards.length;
   let activeIndex = 0;
+  let isPaused = false; // Flag to control auto-scroll
 
   // Generate Dots
   for (let i = 0; i < cardCount; i++) {
@@ -39,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDots(index);
   }
 
-  // Auto-scroll loop
+  // Auto-scroll loop with pause check
   setInterval(() => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 768 && !isPaused) {
       activeIndex = (activeIndex + 1) % cardCount;
       scrollToSlide(activeIndex);
     }
@@ -59,5 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // Pause on interaction
+  facilityGrid.addEventListener('touchstart', () => { isPaused = true; });
+  facilityGrid.addEventListener('touchend', () => {
+    // Resume after a short delay to allow scroll to settle
+    setTimeout(() => { isPaused = false; }, 2000);
+  });
+
+  facilityGrid.addEventListener('mouseenter', () => { isPaused = true; });
+  facilityGrid.addEventListener('mouseleave', () => { isPaused = false; });
 
 });
