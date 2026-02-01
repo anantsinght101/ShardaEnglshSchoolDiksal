@@ -360,16 +360,53 @@ body {
   font-weight: 500;
 }
 
-.green-header {
-  background: #2a9d8f;
+/* Background Image Cards with Overlay */
+/* Background Image Cards with Blur Effect */
+/* Background Image Cards (No Overlay/Effect) */
+.academic-card {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  border: none;
+  background-size: cover;
+  background-position: center;
+  background-color: #333;
+  /* Fallback color */
 }
 
-.orange-header {
-  background: #e76f51;
+/* Ensure text is white */
+.academic-card h3,
+.academic-card p,
+.academic-card li {
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  /* Minimal shadow for readability */
 }
 
-.blue-header {
-  background: #3f72af;
+/* Remove solid headers */
+.green-header,
+.orange-header,
+.blue-header,
+.yellow-header {
+  background: transparent !important;
+  border-bottom: none;
+}
+
+/* Specific images directly on card */
+.card-preprimary {
+  background-image: url('../images/academic-preprimary.jpg');
+}
+
+.card-primary {
+  background-image: url('../images/academic-primary.jpg');
+}
+
+.card-middle {
+  background-image: url('../images/academic-middle.jpg');
+}
+
+.card-secondary {
+  background-image: url('../images/academic-secondary.jpg');
 }
 
 /* Replaced Yellow with Blue for template match */
@@ -658,24 +695,26 @@ body {
 @media (max-width: 768px) {
 
   /* Navbar */
+  /* Navbar */
   .hamburger {
-    display: block;
-    z-index: 1001;
+    display: none;
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--primary);
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    /* Always visible */
+    position: static;
+    /* In flow */
+    flex-direction: row;
+    /* Horizontal */
+    width: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    gap: 0;
   }
 
+  /* Remove absolute positioning logic */
   .nav-links.show {
     display: flex;
   }
@@ -685,10 +724,34 @@ body {
     width: 100%;
   }
 
+  /* Hide all links except About Us on mobile */
+  .nav-links li:not(.nav-about) {
+    display: none;
+  }
+
+  /* Force About Us to be visible */
+  .nav-links li.nav-about {
+    display: block !important;
+  }
+
   .nav-links a {
     display: block;
-    width: 100%;
-    padding: 10px 0;
+    width: auto;
+    padding: 10px;
+    color: var(--white);
+    white-space: nowrap;
+    /* Prevent separate lines */
+  }
+
+  /* Adjust Logo Text for Mobile */
+  .logo-container span {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    max-width: 150px;
+  }
+
+  .school-logo {
+    height: 40px;
   }
 
   /* Hero */
@@ -784,12 +847,77 @@ body {
     font-size: 1.8rem;
   }
 
+  /* Facilities Carousel */
+  .facility-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 5px;
+    /* Add padding for shadow visibility */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .facility-grid::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+  }
+
+  .facility-card {
+    min-width: 85%;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    margin: 0;
+    /* Override any grid margins */
+  }
+
+
+  /* Carousel Dots */
+  .carousel-dots {
+    display: none;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .carousel-dots .dot {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .carousel-dots .dot.active {
+    background: var(--primary);
+  }
+
+  /* Show dots on mobile */
+  @media (max-width: 768px) {
+    .carousel-dots {
+      display: flex;
+    }
+  }
+
   .facility-grid,
   .academic-grid,
   .event-grid {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* Limit Events to 3 on mobile */
+  .event-grid img:nth-child(n+4) {
+    display: none;
+  }
+}
+
 
 /* HAMBURGER MENU */
 .hamburger {

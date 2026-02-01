@@ -9,28 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 
-  <style>
-    /* LOGO STYLES */
-    .logo-container {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: #333;
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
 
-    .school-logo {
-      height: 80px;
-      /* Updated to 80px */
-      width: 80px;
-      object-fit: contain;
-      /* Ensures logo fits inside without cutting */
-      margin-right: 12px;
-      /* Space between logo and text */
-      /* Removed border-radius so the SVG stays sharp */
-    }
-  </style>
 </head>
 
 <body>
@@ -46,7 +25,7 @@
 
       <ul class="nav-links">
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li class="nav-about"><a href="about.html">About Us</a></li>
         <li><a href="#academics">Academics</a></li>
         <li><a href="#admissions">Admissions</a></li>
         <li><a href="#facilities">Facilities</a></li>
@@ -60,19 +39,18 @@
     <div class="hero-content">
       <div class="hero-text">
         <h1>Nurturing Young Minds<br>for a Brighter Tomorrow</h1>
-        <p>CBSE Affiliated School from Grade 1 to 10</p>
+        <p>Sharda English School, Diksal is a Maharashtra State Board (SSC) English medium school offering quality
+          education from Nursery to 10th Standard. The school provides a safe, disciplined, and supportive environment
+          focused on academic excellence and overall development.</p>
 
-        <div class="hero-actions">
-          <button class="primary-btn">Apply for Admission</button>
-          <button class="secondary-btn">Download Prospectus</button>
-        </div>
+
       </div>
 
     </div>
   </section>
 
   <section class="highlights">
-    <div class="highlight-item">🏫 CBSE Affiliated</div>
+    <div class="highlight-item">🏫 SSC Maharashtra Board</div>
     <div class="highlight-item">👩‍🏫 Qualified Teachers</div>
     <div class="highlight-item">🔬 Modern Labs</div>
     <div class="highlight-item">🌱 Holistic Development</div>
@@ -83,11 +61,8 @@
       <img src="images/school-building.jpg" alt="School">
       <div class="about-text">
         <h2>About Our School</h2>
-        <ul>
-          <li>Established in 2005</li>
-          <li>Vision: Excellence in Education</li>
-          <li>Mission: Empowering Young Minds</li>
-        </ul>
+        <p>Established in 2005, Sharda English School follows the SSC curriculum and is dedicated to nurturing
+          confident, responsible, and knowledgeable students through structured academics and strong moral values.</p>
         <button class="primary-btn small">Read More</button>
       </div>
     </div>
@@ -98,56 +73,56 @@
 
     <!-- CARDS from academics.html -->
     <div class="academic-grid">
+      <!-- Pre-Primary -->
+      <div class="academic-card card-preprimary">
+        <div class="card-header yellow-header" style="background: #f4a261;">
+          <h3>Pre-Primary</h3>
+          <p>Nursery, Jr. KG, Sr. KG</p>
+        </div>
+        <div class="card-body">
+          <p>Joyful early learning and skill development</p>
+        </div>
+      </div>
       <!-- Primary -->
-      <div class="academic-card">
+      <div class="academic-card card-primary">
         <div class="card-header green-header">
           <h3>Primary School</h3>
           <p>Class 1 – 5</p>
         </div>
         <div class="card-body">
-          <ul>
-            <li>Activity-Based Learning</li>
-            <li>Interactive Lessons</li>
-            <li>Strong Foundation</li>
-          </ul>
+          <p>Activity-based learning to build strong foundations in language, mathematics, and environmental studies.
+          </p>
           <button class="card-btn">View Curriculum</button>
         </div>
       </div>
 
       <!-- Middle -->
-      <div class="academic-card">
+      <div class="academic-card card-middle">
         <div class="card-header orange-header">
-          <h3>Middle School</h3>
-          <p>Class 6 – 8</p>
+          <h3>Middle</h3>
+          <p>Classes 6 – 8</p>
         </div>
         <div class="card-body">
-          <ul>
-            <li>Experiential Learning</li>
-            <li>Hands-on Projects</li>
-            <li>Critical Thinking</li>
-          </ul>
+          <p>Concept-based and practical learning</p>
           <button class="card-btn">View Curriculum</button>
         </div>
       </div>
 
       <!-- Secondary -->
-      <div class="academic-card">
+      <div class="academic-card card-secondary">
         <div class="card-header blue-header">
-          <h3>Secondary School</h3>
-          <p>Class 9 – 10</p>
+          <h3>Secondary</h3>
+          <p>Classes 9 – 10</p>
         </div>
         <div class="card-body">
-          <ul>
-            <li>CBSE Exam Prep</li>
-            <li>In-depth Subjects</li>
-            <li>Career Guidance</li>
-          </ul>
+          <p>Focused SSC Board preparation with 100% results</p>
           <button class="card-btn">View Curriculum</button>
         </div>
       </div>
     </div>
 
     <!-- PRIMARY SECTION -->
+    <!--
     <section class="detail">
       <h2>Primary School (Classes 1 – 5)</h2>
       <div class="detail-box">
@@ -162,8 +137,10 @@
         <img src="images/primary-students.jpg" alt="Primary School">
       </div>
     </section>
+    -->
 
     <!-- SECONDARY SECTION -->
+    <!--
     <section class="detail">
       <h2>Secondary School (Classes 9 – 10)</h2>
       <div class="detail-box">
@@ -177,6 +154,7 @@
         <img src="images/secondary-students.jpg" alt="Secondary School">
       </div>
     </section>
+    -->
   </section>
 
   <section id="facilities" class="facilities">
@@ -185,44 +163,40 @@
       <!-- Science Lab -->
       <div class="facility-card">
         <img src="images/science-lab.jpg" alt="Science Lab">
-        <h3>Science Laboratories</h3>
+        <h3>Science and Computer Laboratories</h3>
       </div>
 
-      <!-- Computer Lab -->
-      <div class="facility-card">
-        <img src="images/computer-lab.jpg" alt="Computer Lab">
-        <h3>Computer Laboratory</h3>
-      </div>
+
 
       <!-- Library -->
       <div class="facility-card">
         <img src="images/library.jpg" alt="Library">
-        <h3>Library</h3>
-      </div>
-
-      <!-- Sports -->
-      <div class="facility-card">
-        <img src="images/sports-ground.jpg" alt="Sports">
-        <h3>Sports Facilities</h3>
+        <!-- This was Library, now shifting to match user list order or just update text? -->
+        <!-- I will just update the texts in place where appropriate -->
+        <h3>Library and Reading Room</h3>
       </div>
 
       <!-- Music & Art -->
       <div class="facility-card">
         <img src="images/music-art.jpg" alt="Music and Art">
-        <h3>Music & Art Room</h3>
+        <h3>Music, Art, and Cultural Programmes</h3>
       </div>
 
-      <!-- Cafeteria -->
+
+
+      <!-- Co-curricular -->
       <div class="facility-card">
-        <img src="images/cafeteria.jpg" alt="Cafeteria">
-        <h3>Cafeteria & Transport</h3>
+        <img src="images/cafeteria.jpg" alt="Activities">
+        <h3>Co-curricular activities, competitions, and skill-development programmes</h3>
       </div>
     </div>
+    <div class="carousel-dots"></div>
   </section>
 
   <section id="admissions" class="admission-banner">
     <h2>Admissions Open for 2025–26</h2>
-    <p>Applications are now being accepted for the new academic year.</p>
+    <p>Admissions are open for the academic year 2025–26 for Nursery to 10th Standard. Parents are invited to enroll
+      their children in a disciplined and student-focused learning environment.</p>
     <div class="banner-actions">
       <button class="banner-btn-primary">Apply Online</button>
       <button class="banner-btn-secondary">Download Brochure</button>
@@ -230,6 +204,7 @@
   </section>
 
   <section>
+    <!--
     <div class="section-title">Admission Process</div>
     <div class="section-sub">Follow these simple steps to enroll your child</div>
 
@@ -258,7 +233,9 @@
 
     <button class="faq-btn">Read FAQs</button>
   </section>
+  -->
 
+    <!--
   <section>
     <div class="section-title">Admission Criteria</div>
 
@@ -295,6 +272,7 @@
       </div>
     </div>
   </section>
+  -->
   </section>
 
   <section class="events">
@@ -337,8 +315,8 @@
           </iframe>
         </div>
         <div class="location-details">
-          <p><strong>📍 Sharada English School</strong></p>
-          <p>At Post Diksai, Tal. Chiplun, Dist. Ratnagiri</p>
+          <p><strong>📍 Sharda English School, Diksal</strong></p>
+          <p>Near Bhivpuri Railway Station, Maharashtra</p>
         </div>
       </div>
 
@@ -346,7 +324,7 @@
   </section>
 
   <footer class="footer">
-    © 2025 Sharda English School, Diksal | CBSE Affiliated
+    ISO 9001:2015 Certified SSC English Medium School | Nursery to 10th Standard
   </footer>
 
   <script src="js/main.js"></script>
