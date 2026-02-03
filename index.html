@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
 
 
@@ -19,7 +20,7 @@
 
       <a href="index.html" class="logo-container">
         <img src="images/schoollogo.svg" alt="Sharda English School Diksal" class="school-logo">
-        <span>Sharda English School</span>
+        <span>Sharda English School , Diksal</span>
       </a>
       <button class="hamburger" onclick="toggleMenu()">☰</button>
 
@@ -49,6 +50,11 @@
     </div>
   </section>
 
+  <div class="sticky-marquee">
+    <marquee behavior="scroll" direction="left">Admissions Open - Contact: 9403318540 / surajgthakurdiksal@gmail.com
+    </marquee>
+  </div>
+
   <section class="highlights">
     <div class="highlight-item">🏫 SSC Maharashtra Board</div>
     <div class="highlight-item">👩‍🏫 Qualified Teachers</div>
@@ -67,7 +73,7 @@
         <p>We believe that every child has the potential to learn and grow when guided with care, values, and the right
           academic support. With dedicated teachers and a strong focus on both academics and character building, Sharda
           English School strives to nurture confident, responsible, and capable individuals prepared for the future.</p>
-        <button class="primary-btn small">Read More</button>
+        <button class="primary-btn small" onclick="window.location.href='about.html'">Read More</button>
       </div>
     </div>
   </section>
@@ -83,9 +89,10 @@
           <h3>Pre-Primary</h3>
           <p>Nursery, Jr. KG, Sr. KG</p>
         </div>
+        <img src="images/academic-preprimary.jpg" alt="Pre-Primary" class="card-img-middle">
         <div class="card-body">
           <p>Joyful early learning and skill development</p>
-          <button class="card-btn">View Curriculum</button>
+
         </div>
       </div>
       <!-- Primary -->
@@ -94,10 +101,11 @@
           <h3>Primary School</h3>
           <p>Class 1 – 5</p>
         </div>
+        <img src="images/academic-primary.jpg" alt="Primary" class="card-img-middle">
         <div class="card-body">
-          <p>Activity-based learning to build strong foundations in language, mathematics, and environmental studies.
+          <p>Build strong foundations in language, mathematics, and environmental studies.
           </p>
-          <button class="card-btn">View Curriculum</button>
+
         </div>
       </div>
 
@@ -107,9 +115,10 @@
           <h3>Middle</h3>
           <p>Classes 6 – 8</p>
         </div>
+        <img src="images/academic-middle.jpg" alt="Middle" class="card-img-middle">
         <div class="card-body">
           <p>Concept-based and practical learning</p>
-          <button class="card-btn">View Curriculum</button>
+
         </div>
       </div>
 
@@ -119,9 +128,10 @@
           <h3>Secondary</h3>
           <p>Classes 9 – 10</p>
         </div>
+        <img src="images/academic-secondary.jpg" alt="Secondary" class="card-img-middle">
         <div class="card-body">
           <p>Focused SSC Board preparation with 100% results</p>
-          <button class="card-btn">View Curriculum</button>
+
         </div>
       </div>
     </div>
@@ -175,15 +185,13 @@
 
       <!-- Library -->
       <div class="facility-card">
-        <img src="images/library.jpg" alt="Library">
-        <!-- This was Library, now shifting to match user list order or just update text? -->
-        <!-- I will just update the texts in place where appropriate -->
-        <h3>Library and Reading Room</h3>
+        <img src="images/sports.png" alt="Library and Reading Room">
+        <h3>Sports and Extra-curricular activities</h3>
       </div>
 
       <!-- Music & Art -->
       <div class="facility-card">
-        <img src="images/music-art.jpg" alt="Music and Art">
+        <img src="images/music.jpeg" alt="Music, Art, and Cultural Programmes">
         <h3>Music, Art, and Cultural Programmes</h3>
       </div>
 
@@ -191,8 +199,8 @@
 
       <!-- Co-curricular -->
       <div class="facility-card">
-        <img src="images/cafeteria.jpg" alt="Activities">
-        <h3>Co-curricular activities, competitions, and skill-development programmes</h3>
+        <img src="images/cocurri.jpeg" alt="Co-curricular activities">
+        <h3>Co-curricular activities</h3>
       </div>
     </div>
     <div class="carousel-dots"></div>
@@ -203,7 +211,7 @@
     <p>Admissions are open for the academic year 2025–26 for Nursery to 10th Standard. Parents are invited to enroll
       their children in a disciplined and student-focused learning environment.</p>
     <div class="banner-actions">
-      <button class="banner-btn-primary">Apply Online</button>
+      <!-- <button class="banner-btn-primary">Apply Online</button> -->
       <button class="banner-btn-secondary">Download Brochure</button>
     </div>
   </section>
@@ -329,7 +337,24 @@
   </section>
 
   <footer class="footer">
-    ISO 9001:2015 Certified SSC English Medium School | Nursery to 10th Standard
+    <div class="footer-content">
+      <p>ISO 9001:2015 Certified SSC English Medium School | Nursery to 10th Standard</p>
+      <div class="footer-links">
+        <div class="footer-row">
+          <a href="https://jsdl.in/RSL-JII1770039966" target="_blank"><i class="fas fa-map-marker-alt"></i> Justdial</a>
+          <a href="https://youtube.com/@shardaenglishschool8920?si=-Byb9nrodsXPXtr6" target="_blank"><i
+              class="fab fa-youtube"></i> YouTube</a>
+        </div>
+        <div class="footer-row">
+          <a href="https://www.facebook.com/suraj.thakur.444874?locale=en_GB" target="_blank"><i
+              class="fab fa-facebook"></i> Facebook</a>
+          <a href="tel:9403318540"><i class="fas fa-phone"></i> 9403318540</a>
+        </div>
+        <div class="footer-row">
+          <a href="mailto:surajgthakurdiksal@gmail.com"><i class="fas fa-envelope"></i> surajgthakurdiksal@gmail.com</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

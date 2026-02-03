@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/about.css">
 </head>
@@ -17,10 +18,11 @@
   <header class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo-container">
-        <img src="images/schoollogo.svg" alt="Logo" class="school-logo">
-        <span>Sharda English School</span>
+        <img src="images/schoollogo.svg" alt="Sharda English School Diksal" class="school-logo">
+        <span>Sharda English School , Diksal</span>
       </a>
 
+      <a href="index.html" class="mobile-home-btn" style="color:white; padding: left 10px; " ;>HOME</a>
       <button class="hamburger" onclick="toggleMenu()">☰</button>
 
       <ul class="nav-links">
@@ -40,7 +42,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>About Our School</h1>
-      <p>Home / About Us</p>
+      <!-- <p>Home / About Us</p> -->
     </div>
   </section>
 
@@ -51,16 +53,15 @@
     <div class="welcome-box">
       <img src="images/welcome-students.jpg" alt="Students">
       <div class="welcome-text">
-        <p><strong>Sharda English School, Diksal</strong> is a premier educational institution certified by <strong>ISO
-            9001:2015 Quality Management System</strong>. Managed by Vidya Prasarak Mandal, we are dedicated to
-          providing quality education from Nursery to 10th Standard following the Maharashtra State Board (SSC)
-          curriculum.</p>
+        <p><strong>Sharda English School, Diksal</strong> is an ISO 9001:2015 certified English medium school managed by
+          Vidya Prasarak Mandal. Established in 2002, the school provides quality education from Nursery to 10th
+          Standard following the Maharashtra State Board (SSC) curriculum.</p>
 
-        <p><strong>Address:</strong> Diksal, Po. - Koshane, Tal - Karjat, Dist. - Raigad, Pin-410201, India.</p>
+        <p>Set in a calm and student-friendly environment, the school is committed to academic excellence, discipline,
+          and strong moral values. Through experienced teachers and a structured curriculum, we create a supportive
+          atmosphere where every child is encouraged to learn and grow.</p>
 
-        <p>Established with the goal of providing quality education, Sharda English School focuses on strong academic
-          foundations, moral values, and a supportive learning environment. With experienced teachers and a structured
-          SSC curriculum, the school prepares students for academic success and responsible citizenship.</p>
+        <p><strong>Address:</strong> Diksal, Post Koshane, Taluka Karjat, District Raigad – 410201, Maharashtra.</p>
       </div>
     </div>
   </section>
@@ -71,17 +72,20 @@
 
     <div class="principal-box">
       <div class="principal-card">
-        <img src="images/principal.jpg">
-        <h4>Mrs. Principal Name</h4>
+        <img src="images/principal-new.png" alt="Principal">
+        <h4>Mrs. Kiran Suraj Thakur</h4>
         <span>Principal</span>
       </div>
 
-      <p>
-        Dear Parents and Students,<br><br>
-        I warmly welcome you to SCHOOL NAME, where we believe education is not only
-        about academic success but about shaping responsible and compassionate citizens.
-        Our school environment encourages curiosity, discipline, and excellence.
-      </p>
+      <div class="principal-text">
+        <p><strong>Dear Parents and Students,</strong></p>
+        <p>It is my pleasure to welcome you to Sharda English School, Diksal. Since our establishment in 2002, we have
+          believed that education goes beyond academic success—it shapes character, values, and confidence.</p>
+        <p>Our school promotes a balanced learning environment where discipline, curiosity, and compassion are equally
+          valued. With the support of dedicated teachers and the trust of parents, we strive to guide our students
+          towards responsible citizenship and lifelong learning.</p>
+        <p style="margin-top: 15px;">Warm regards,<br><strong>Mrs. Kiran Suraj Thakur</strong></p>
+      </div>
     </div>
   </section>
 
@@ -89,18 +93,13 @@
   <section class="vision-mission">
     <div class="vm">
       <h3>Our Vision</h3>
-      <div class="vm-grid">
-        <div>🤝 Integrity</div>
-        <div>🏆 Excellence</div>
-      </div>
+      <p>To nurture confident and responsible individuals prepared to lead with integrity and excellence.</p>
     </div>
 
     <div class="vm">
       <h3>Our Mission</h3>
-      <div class="vm-grid">
-        <div>❤️ Compassion</div>
-        <div>👥 Collaboration</div>
-      </div>
+      <p>To provide quality education in a disciplined and caring environment that supports academic growth, values, and
+        holistic development.</p>
     </div>
   </section>
 
@@ -110,12 +109,9 @@
 
     <div class="history-box">
       <img src="images/school-building.jpg">
-      <ul>
-        <li><strong>2005:</strong> School established</li>
-        <li>Expanded infrastructure</li>
-        <li>Modern labs introduced</li>
-        <li>Consistently ranked among top SSC schools</li>
-      </ul>
+      <p style="line-height: 1.8; color: var(--text-dark);">Established in 2002, Sharda English School, Diksal was
+        founded to make quality English medium education accessible to students in the region. Over the years, the
+        school has grown steadily in academics, infrastructure, and reputation under the SSC curriculum.</p>
     </div>
   </section>
 
@@ -126,23 +122,40 @@
       <ul>
         <li>Integrity and honesty</li>
         <li>Academic excellence</li>
-        <li>Student-centric approach</li>
+        <li>Student-focused learning</li>
         <li>Discipline and responsibility</li>
       </ul>
     </div>
 
     <div class="awards">
-      <h3>ISO 9001:2015 Certified</h3>
-      <p>We are proud to be an ISO 9001:2015 certified institution for providing quality education from Nursery to 10th
-        Standard.</p>
+      <h3>Quality Commitment</h3>
+      <p>Sharda English School, Diksal is an ISO 9001:2015 certified institution, demonstrating our commitment to
+        maintaining high standards in education for students from Nursery to 10th Standard.</p>
       <img src="images/iso_certificate.jpg" alt="ISO 9001:2015 Certificate"
         style="max-width: 100%; border: 1px solid #ddd; padding: 5px;">
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    ISO 9001:2015 Certified SSC English Medium School | Nursery to 10th Standard
+  <footer class="footer">
+    <div class="footer-content">
+      <p>ISO 9001:2015 Certified SSC English Medium School | Nursery to 10th Standard</p>
+      <div class="footer-links">
+        <div class="footer-row">
+          <a href="https://jsdl.in/RSL-JII1770039966" target="_blank"><i class="fas fa-map-marker-alt"></i> Justdial</a>
+          <a href="https://youtube.com/@shardaenglishschool8920?si=-Byb9nrodsXPXtr6" target="_blank"><i
+              class="fab fa-youtube"></i> YouTube</a>
+        </div>
+        <div class="footer-row">
+          <a href="https://www.facebook.com/suraj.thakur.444874?locale=en_GB" target="_blank"><i
+              class="fab fa-facebook"></i> Facebook</a>
+          <a href="tel:9403318540"><i class="fas fa-phone"></i> 9403318540</a>
+        </div>
+        <div class="footer-row">
+          <a href="mailto:surajgthakurdiksal@gmail.com"><i class="fas fa-envelope"></i> surajgthakurdiksal@gmail.com</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

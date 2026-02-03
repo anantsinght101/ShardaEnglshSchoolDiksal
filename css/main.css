@@ -360,18 +360,16 @@ body {
   font-weight: 500;
 }
 
-/* Background Image Cards with Overlay */
-/* Background Image Cards with Blur Effect */
 /* Background Image Cards (No Overlay/Effect) */
 .academic-card {
   position: relative;
   overflow: hidden;
-  color: white;
-  border: none;
-  background-size: cover;
-  background-position: center;
-  background-color: #333;
-  /* Fallback color */
+  color: var(--text-dark);
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  /* Grey Shadow */
   display: flex;
   flex-direction: column;
 }
@@ -380,9 +378,8 @@ body {
 .academic-card h3,
 .academic-card p,
 .academic-card li {
-  color: white !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-  /* Minimal shadow for readability */
+  color: var(--text-dark) !important;
+  text-shadow: none;
 }
 
 /* Remove solid headers */
@@ -395,26 +392,20 @@ body {
 }
 
 /* Specific images directly on card */
-.card-preprimary {
-  background-image: url('../images/academic-preprimary.jpg');
-}
-
-.card-primary {
-  background-image: url('../images/academic-primary.jpg');
-}
-
-.card-middle {
-  background-image: url('../images/academic-middle.jpg');
-}
-
+/* Specific colors for text-only style */
+/* Specific colors removed for white card style */
+.card-preprimary,
+.card-primary,
+.card-middle,
 .card-secondary {
-  background-image: url('../images/academic-secondary.jpg');
+  background: #fff;
+  border-color: #e5e7eb;
 }
 
 /* Replaced Yellow with Blue for template match */
 
 .card-body {
-  padding: 25px;
+  padding: 15px;
   text-align: left;
   flex-grow: 1;
   display: flex;
@@ -678,9 +669,62 @@ body {
   background: var(--primary);
   color: var(--white);
   text-align: center;
-  padding: 40px 0;
+  padding: 40px 20px;
   margin-top: 0;
   border-top: 4px solid var(--accent);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.footer-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.footer-links i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ffd700;
+  /* Yellow Border */
+  border-radius: 50%;
+  /* Circular */
+  color: #ffd700;
+  /* Yellow Icon */
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover i {
+  background: #ffd700;
+  color: var(--primary);
+  /* Text color on hover */
 }
 
 
@@ -747,6 +791,11 @@ body {
     color: var(--white);
     white-space: nowrap;
     /* Prevent separate lines */
+  }
+
+  /* Highlights: Show only first item (SSC Board) */
+  .highlights .highlight-item:nth-child(n+2) {
+    display: none;
   }
 
   /* Adjust Logo Text for Mobile */
@@ -854,30 +903,44 @@ body {
   }
 
   /* Facilities Carousel */
+  /* Facilities Carousel */
   .facility-grid {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    gap: 20px;
-    padding: 20px 5px;
-    /* Add padding for shadow visibility */
+    gap: 0;
+    /* No gap for single card view */
+    padding: 20px 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    /* Firefox */
   }
 
   .facility-grid::-webkit-scrollbar {
     display: none;
-    /* Chrome/Safari */
   }
 
   .facility-card {
-    min-width: 85%;
+    min-width: 100%;
+    /* One card at a time */
     scroll-snap-align: center;
     flex-shrink: 0;
     margin: 0;
-    /* Override any grid margins */
+    box-sizing: border-box;
+    /* Ensure padding is included */
+    /* Padding is inherited from main style (15px) */
+    height: 100%;
+    /* Force uniform height */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Adjust text for smaller screens */
+  .facility-card h3 {
+    font-size: 1rem;
+    margin-top: auto;
+    /* Push to bottom if needed, or just standard spacing */
+    padding-top: 10px;
   }
 
 
@@ -1186,8 +1249,69 @@ body {
   margin: 30px auto;
   padding: 10px 20px;
   background: transparent;
-  border: 1px solid var(--blue);
+  border: 1px solid var(--secondary);
   border-radius: 6px;
-  color: var(--blue);
+  color: var(--secondary);
   cursor: pointer;
+}
+
+/* Mobile Home Button (About Page) */
+.mobile-home-btn {
+  display: block;
+  margin-left: auto;
+  /* Push to right */
+  margin-right: 15px;
+  background: transparent;
+  /* Same as header */
+  color: var(--white);
+  /* White Text */
+  border: 1px solid var(--white);
+  /* White Border */
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.mobile-home-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+@media(max-width: 768px) {
+  .mobile-home-btn {
+    display: block;
+    margin-right: 10px;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Sticky Admission Marquee */
+.sticky-marquee {
+  position: -webkit-sticky;
+  position: sticky;
+  /* Matched to approx header height + buffer */
+  top: 85px;
+  background-color: #ffd700;
+  /* Bright Yellow */
+  color: #000;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 998;
+  /* Under navbar (1000) but above content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sticky-marquee {
+    top: 105px;
+    /* Adjust for mobile header */
+    font-size: 0.9rem;
+    padding: 8px 0;
+  }
 }

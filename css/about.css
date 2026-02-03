@@ -145,14 +145,22 @@
   text-transform: uppercase;
 }
 
-.principal-box p {
-  font-style: italic;
-  line-height: 1.9;
+/* Updated Principal Text */
+.principal-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.principal-text p {
+  margin-bottom: 15px;
+}
+
+/* VISION MISSION Updates */
+.vm p {
   font-size: 1.1rem;
-  color: #4b5563;
-  position: relative;
-  padding-left: 20px;
-  border-left: 4px solid var(--accent);
+  line-height: 1.6;
+  color: var(--text-dark);
 }
 
 /* VISION MISSION */
