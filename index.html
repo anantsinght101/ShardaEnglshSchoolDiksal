@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
-
+  <link rel="stylesheet" href="css/gallery.css">
 
 </head>
 
@@ -43,10 +43,7 @@
         <p>Sharda English School, Diksal is a Maharashtra State Board (SSC) English medium school offering quality
           education from Nursery to 10th Standard. The school provides a safe, disciplined, and supportive environment
           focused on academic excellence and overall development.</p>
-
-
       </div>
-
     </div>
   </section>
 
@@ -78,126 +75,41 @@
     </div>
   </section>
 
-  <section id="academics" class="academics">
-    <h2>Our Academics</h2>
+ 
+<!-- ===== GALLERY SECTION ===== -->
+  <section id="gallery" class="gallery-section">
+    <h2>School Gallery</h2>
+    <p class="gallery-subtext">Moments from our school life</p>
 
-    <!-- CARDS from academics.html -->
-    <div class="academic-grid">
-      <!-- Pre-Primary -->
-      <div class="academic-card card-preprimary">
-        <div class="card-header yellow-header" style="background: #f4a261;">
-          <h3>Pre-Primary</h3>
-          <p>Nursery, Jr. KG, Sr. KG</p>
-        </div>
-        <img src="images/academic-preprimary.jpg" alt="Pre-Primary" class="card-img-middle">
-        <div class="card-body">
-          <p>Joyful early learning and skill development</p>
-
-        </div>
-      </div>
-      <!-- Primary -->
-      <div class="academic-card card-primary">
-        <div class="card-header green-header">
-          <h3>Primary School</h3>
-          <p>Class 1 – 5</p>
-        </div>
-        <img src="images/academic-primary.jpg" alt="Primary" class="card-img-middle">
-        <div class="card-body">
-          <p>Build strong foundations in language, mathematics, and environmental studies.
-          </p>
-
-        </div>
-      </div>
-
-      <!-- Middle -->
-      <div class="academic-card card-middle">
-        <div class="card-header orange-header">
-          <h3>Middle</h3>
-          <p>Classes 6 – 8</p>
-        </div>
-        <img src="images/academic-middle.jpg" alt="Middle" class="card-img-middle">
-        <div class="card-body">
-          <p>Concept-based and practical learning</p>
-
-        </div>
-      </div>
-
-      <!-- Secondary -->
-      <div class="academic-card card-secondary">
-        <div class="card-header blue-header">
-          <h3>Secondary</h3>
-          <p>Classes 9 – 10</p>
-        </div>
-        <img src="images/academic-secondary.jpg" alt="Secondary" class="card-img-middle">
-        <div class="card-body">
-          <p>Focused SSC Board preparation with 100% results</p>
-
-        </div>
-      </div>
+    <div class="gallery-rotate-grid" id="galleryRotateGrid">
+     <div class="gallery-rotate-item"><img id="galleryImg0" src="" alt="images loading" /></div>
+      <div class="gallery-rotate-item"><img id="galleryImg1" src="" alt="images loading" /></div>
+      <div class="gallery-rotate-item"><img id="galleryImg2" src="" alt="images loading" /></div>
+        <div class="gallery-rotate-item"><img id="galleryImg3" src="" alt="images loading" /></div>  <!-- add this -->
     </div>
 
-    <!-- PRIMARY SECTION -->
-    <!--
-    <section class="detail">
-      <h2>Primary School (Classes 1 – 5)</h2>
-      <div class="detail-box">
-        <ul>
-          <li>English</li>
-          <li>Mathematics</li>
-          <li>EVS</li>
-          <li>Hindi</li>
-          <li>Computer Science</li>
-          <li>Art & Craft</li>
-        </ul>
-        <img src="images/primary-students.jpg" alt="Primary School">
-      </div>
-    </section>
-    -->
-
-    <!-- SECONDARY SECTION -->
-    <!--
-    <section class="detail">
-      <h2>Secondary School (Classes 9 – 10)</h2>
-      <div class="detail-box">
-        <ul>
-          <li>English</li>
-          <li>Mathematics</li>
-          <li>Science</li>
-          <li>Social Science</li>
-          <li>Information Technology</li>
-        </ul>
-        <img src="images/secondary-students.jpg" alt="Secondary School">
-      </div>
-    </section>
-    -->
+    <div class="gallery-cta">
+      <a href="gallery.html" class="btn-view-all">View All Photos →</a>
+    </div>
   </section>
+  <!-- ===== END GALLERY SECTION ===== -->
+   
 
   <section id="facilities" class="facilities">
     <h2>Our Facilities</h2>
     <div class="facility-grid">
-      <!-- Science Lab -->
       <div class="facility-card">
         <img src="images/science1.jpeg" alt="Science and Computer Laboratories">
         <h3>Science and Computer Laboratories</h3>
       </div>
-
-
-
-      <!-- Library -->
       <div class="facility-card">
         <img src="images/sports.png" alt="Library and Reading Room">
         <h3>Sports and Extra-curricular activities</h3>
       </div>
-
-      <!-- Music & Art -->
       <div class="facility-card">
         <img src="images/music.jpeg" alt="Music, Art, and Cultural Programmes">
         <h3>Music, Art, and Cultural Programmes</h3>
       </div>
-
-
-
-      <!-- Co-curricular -->
       <div class="facility-card">
         <img src="images/cocurri.jpeg" alt="Co-curricular activities">
         <h3>Co-curricular activities</h3>
@@ -211,96 +123,64 @@
     <p>Admissions are open for the academic year 2025–26 for Nursery to 10th Standard. Parents are invited to enroll
       their children in a disciplined and student-focused learning environment.</p>
     <div class="banner-actions">
-      <!-- <button class="banner-btn-primary">Apply Online</button> -->
       <button class="banner-btn-secondary">Download Brochure</button>
     </div>
   </section>
 
   <section>
-    <!--
-    <div class="section-title">Admission Process</div>
-    <div class="section-sub">Follow these simple steps to enroll your child</div>
-
-    <div class="process">
-      <div class="step">
-        <div class="step-circle">1</div>
-        <h4>Fill Application</h4>
-      </div>
-      <div class="step active">
-        <div class="step-circle">2</div>
-        <h4>Submit Documents</h4>
-      </div>
-      <div class="step">
-        <div class="step-circle">3</div>
-        <h4>Interaction</h4>
-      </div>
-      <div class="step">
-        <div class="step-circle">4</div>
-        <h4>Assessment</h4>
-      </div>
-      <div class="step">
-        <div class="step-circle">5</div>
-        <h4>Confirmation</h4>
-      </div>
-    </div>
-
-    <button class="faq-btn">Read FAQs</button>
   </section>
-  -->
 
-    <!--
-  <section>
-    <div class="section-title">Admission Criteria</div>
-
-    <div class="criteria">
-      <div>
-        <h4>Age Criteria</h4>
-        <ul>
-          <li>Class 1: 6+ years</li>
-          <li>Class 6: 11+ years</li>
-          <li>Class 9: 14+ years</li>
-        </ul>
+   <section id="academics" class="academics">
+    <h2>Our Academics</h2>
+ <div class="academic-grid">
+      <!-- Pre-Primary -->
+      <div class="academic-card card-preprimary">
+        <div class="card-header yellow-header" style="background: #f4a261;">
+          <h3>Pre-Primary</h3>
+          <p>Nursery, Jr. KG, Sr. KG</p>
+        </div>
+        <img src="images/academic-preprimary.jpg" alt="Pre-Primary" class="card-img-middle">
+        <div class="card-body">
+          <p>Joyful early learning and skill development</p>
+        </div>
+      </div>
+      <!-- Primary -->
+      <div class="academic-card card-primary">
+        <div class="card-header green-header">
+          <h3>Primary School</h3>
+          <p>Class 1 – 5</p>
+        </div>
+        <img src="images/academic-primary.jpg" alt="Primary" class="card-img-middle">
+        <div class="card-body">
+          <p>Build strong foundations in language, mathematics, and environmental studies.</p>
+        </div>
       </div>
 
-      <div>
-        <h4>Required Documents</h4>
-        <ul>
-          <li>Birth Certificate</li>
-          <li>Aadhaar Card</li>
-          <li>Previous Report Card</li>
-        </ul>
+      <!-- Middle -->
+      <div class="academic-card card-middle">
+        <div class="card-header orange-header">
+          <h3>Middle</h3>
+          <p>Classes 6 – 8</p>
+        </div>
+        <img src="images/academic-middle.jpg" alt="Middle" class="card-img-middle">
+        <div class="card-body">
+          <p>Concept-based and practical learning</p>
+        </div>
       </div>
 
-      <div>
-        <h4>Entrance Test (6–10)</h4>
-        <ul>
-          <li>English & Mathematics</li>
-          <li>Science basics</li>
-        </ul>
-      </div>
-
-      <div class="criteria-actions">
-        <button class="btn-white">Apply Now</button>
-        <button class="btn-blue">Contact Us</button>
+      <!-- Secondary -->
+      <div class="academic-card card-secondary">
+        <div class="card-header blue-header">
+          <h3>Secondary</h3>
+          <p>Classes 9 – 10</p>
+        </div>
+        <img src="images/academic-secondary.jpg" alt="Secondary" class="card-img-middle">
+        <div class="card-body">
+          <p>Focused SSC Board preparation with 100% results</p>
+        </div>
       </div>
     </div>
   </section>
-  -->
-  </section>
-
-  <section class="events">
-    <h2>Latest Events & News</h2>
-    <div class="event-grid">
-      <img src="images/event-1.jpg" alt="Event 1">
-      <img src="images/event-2.jpg" alt="Event 2">
-      <img src="images/event-3.jpg" alt="Event 3">
-      <img src="images/event-4.jpg" alt="Event 4">
-      <img src="images/event-5.jpg" alt="Event 5">
-      <img src="images/event-6.jpg" alt="Event 6">
-    </div>
-    <button class="primary-btn small">View More</button>
-  </section>
-
   <!-- SCHOOL TOUR & LOCATION -->
   <section class="location-video-section">
     <div class="lv-container">
@@ -309,7 +189,7 @@
       <div class="lv-box video-box">
         <h2>School Tour</h2>
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/s60fXY-b-xI" title="School Tour Video" frameborder="0"
+          <iframe src="https://www.youtube.com/embed/gWo0y3_UTF0" title="School Tour Video" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
@@ -358,6 +238,52 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <!-- ===== GALLERY SCRIPT ===== -->
+  <script>
+    // ---- REPLACE this URL with your Apps Script deployment URL ----
+    var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzHdYYvo2jCJHDCysdph0vhKefbxETtbVO83E-XcRLBfmcbdny_gO_YVpz5uTKeHpNQ/exec';
+
+    function getDriveImageUrl(id) {
+      return 'https://drive.google.com/thumbnail?id=' + id + '&sz=w600';
+    }
+
+    fetch(APPS_SCRIPT_URL)
+      .then(function(res) { return res.json(); })
+      .then(function(images) {
+        var pool = images.slice(0, 15); // use latest 15
+        if (pool.length === 0) return;
+
+        var groupIndex = 0;
+        var groupSize = 4;
+
+        function showGroup() {
+          for (var i = 0; i < groupSize; i++) {
+            var imgEl = document.getElementById('galleryImg' + i);
+            if (!imgEl) continue;
+            var poolImg = pool[(groupIndex * groupSize + i) % pool.length];
+            if (poolImg) {
+              imgEl.style.opacity = '0';
+              (function(el, src) {
+                setTimeout(function() {
+                  el.src = src;
+                  el.style.opacity = '1';
+                }, 200);
+              })(imgEl, getDriveImageUrl(poolImg.id));
+            }
+          }
+          groupIndex = (groupIndex + 1) % Math.ceil(pool.length / groupSize);
+        }
+
+        showGroup();
+        setInterval(showGroup, 3000);
+      })
+      .catch(function() {
+        console.log('Gallery could not load.');
+      });
+  </script>
+  <!-- ===== END GALLERY SCRIPT ===== -->
+
 </body>
 
 </html>

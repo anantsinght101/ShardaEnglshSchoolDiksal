@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery – Sharda English School Diksal</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- Same navbar as your main site -->
+  <header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo-container">
+      <img src="images/schoollogo.svg" alt="Sharda English School Diksal" class="school-logo">
+      <span>Sharda English School, Diksal</span>
+    </a>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </div>
+</header>
+
+  <!-- Gallery Page -->
+  <div class="gallery-page">
+    <div class="gallery-page-header">
+      <h1>School Gallery</h1>
+      <p>All photos from our school events and activities</p>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-page-loading">Loading all photos...</div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev">‹</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    <button class="lightbox-next" id="lightboxNext">›</button>
+  </div>
+
+  <footer class="footer">
+    <p>© Sharda English School, Diksal | <a href="index.html">Home</a></p>
+  </footer>
+
+  <script>
+    // ---- REPLACE THIS URL with your Apps Script deployment URL ----
+    var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzHdYYvo2jCJHDCysdph0vhKefbxETtbVO83E-XcRLBfmcbdny_gO_YVpz5uTKeHpNQ/exec';
+
+    var allImages = [];
+    var currentIndex = 0;
+
+    function getDriveImageUrl(id, size) {
+      return 'https://drive.google.com/thumbnail?id=' + id + '&sz=' + (size || 'w600');
+    }
+
+    function openLightbox(index) {
+      currentIndex = index;
+      var lb = document.getElementById('lightbox');
+      document.getElementById('lightboxImg').src = getDriveImageUrl(allImages[index].id, 'w1200');
+      lb.classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    document.getElementById('lightboxClose').onclick = closeLightbox;
+    document.getElementById('lightboxNext').onclick = function() {
+      currentIndex = (currentIndex + 1) % allImages.length;
+      document.getElementById('lightboxImg').src = getDriveImageUrl(allImages[currentIndex].id, 'w1200');
+    };
+    document.getElementById('lightboxPrev').onclick = function() {
+      currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+      document.getElementById('lightboxImg').src = getDriveImageUrl(allImages[currentIndex].id, 'w1200');
+    };
+    document.getElementById('lightbox').onclick = function(e) {
+      if (e.target === this) closeLightbox();
+    };
+
+    fetch(APPS_SCRIPT_URL)
+      .then(function(res) { return res.json(); })
+      .then(function(images) {
+        allImages = images;
+        var grid = document.getElementById('galleryGrid');
+        grid.innerHTML = '';
+
+        if (images.length === 0) {
+          grid.innerHTML = '<div class="gallery-page-loading">No photos uploaded yet.</div>';
+          return;
+        }
+
+        images.forEach(function(img, index) {
+          var item = document.createElement('div');
+          item.className = 'gallery-grid-item';
+          item.innerHTML = '<img src="' + getDriveImageUrl(img.id) + '" alt="' + img.name + '" loading="lazy"/>';
+          item.onclick = function() { openLightbox(index); };
+          grid.appendChild(item);
+        });
+      })
+      .catch(function() {
+        document.getElementById('galleryGrid').innerHTML = '<div class="gallery-page-loading">Could not load photos. Please try again later.</div>';
+      });
+  </script>
+
+</body>
+</html>

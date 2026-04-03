@@ -1315,3 +1315,238 @@ body {
     padding: 8px 0;
   }
 }
+
+
+/* =========================================
+   GALLERY SECTION (Homepage)
+   ========================================= */
+.gallery-section {
+  padding: 80px 0;
+  background: var(--bg-light);
+  text-align: center;
+}
+
+.gallery-section h2 {
+  color: var(--primary);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.gallery-subtext {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.gallery-rotate-grid {
+  width: var(--container-width);
+  max-width: 700px;
+  margin: 0 auto 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}@media (min-width: 600px) {
+  .gallery-rotate-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+.gallery-rotate-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  box-shadow: var(--shadow-md);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-cta {
+  margin-top: 10px;
+}
+
+.btn-view-all {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-view-all:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   GALLERY PAGE (gallery.html)
+   ========================================= */
+.gallery-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 16px 60px;
+}
+
+.gallery-page-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.gallery-page-header h1 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.gallery-page-header h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.gallery-page-header p {
+  color: var(--text-light);
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.gallery-grid-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-grid-item img:hover {
+  opacity: 0.88;
+  transform: scale(1.01);
+}
+
+.gallery-page-loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 85vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: var(--white);
+  font-size: 40px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.lightbox-prev {
+  left: 10px;
+}
+
+.lightbox-next {
+  right: 10px;
+}
+
+/* Back button for gallery.html navbar */
+.back-btn {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 7px 16px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+/* Gallery Responsive */
+@media (min-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .gallery-rotate-grid {
+    gap: 10px;
+  }
+
+  .gallery-rotate-item img {
+    border-radius: 8px;
+  }
+
+  .gallery-section h2 {
+    font-size: 1.8rem;
+  }
+}
